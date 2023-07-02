@@ -9,6 +9,7 @@
 
   --background-header-start-rgb: 0, 94, 213;
   --background-header-end-rgb: 0, 94, 173;
+  --white: #fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,6 +30,15 @@ body {
       rgb(var(--background-start-rgb));
 }
 
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  height: 100vh;
+  height: 100svh;
+  /* height: -webkit-fill-available; */
+
+}
 
 .header {
   background: linear-gradient(
@@ -37,30 +47,49 @@ body {
       rgb(var(--background-header-end-rgb))
       )
       rgb(var(--background-header-start-rgb));
-      position: relative;
-      height: 10vh; 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  padding: 0px 10px; 
+}
+
+.header_title_container {
+  color: var(--white);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .header_title {
-  color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  position: absolute;
-  top: 33%;
-  left: 5%;
+  letter-spacing: .2rem;
+
 }
-.header_transport {
-  display: inline-block;
-  position: absolute;
-  right: 2%;
-  top: 10%;
+
+.header_title_description {
+  display: flex;
+  margin: 0 auto;
+  font-size: 10px;
+
+}
+
+.header_transport_container {
+  display: flex;
+  width: 15%;
+}
+
+.header_transport{
+  width: 100%;
 }
 
 .main {
-  height:80vh;
-  overflow:scroll;
+  height:80%;
+  overflow-y: auto;
+	-webkit-overflow-scrolling:touch;
   position: relative;
 
 }
@@ -69,12 +98,12 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center;
-  color: #fff; 
+  color: var(--white); 
   height: 100%;
 }
 
 .footer {
-  height: 10vh; 
+  height: 10%; 
 }
 
 .error_message {
@@ -98,7 +127,7 @@ body {
   margin: 0 auto;
   width: 180px;
   height: 40px;
-  background-color: white;
+  background-color:var(--white);
   border: 1px #000 solid;
   border-radius: 5px;
   display: flex;
@@ -136,7 +165,7 @@ body {
 .bort_number_blue_text {
   margin: 0 auto;
   position: relative;
-  color: #fff;
+  color: var(--white);
   font-size: 9pt;
 }
 

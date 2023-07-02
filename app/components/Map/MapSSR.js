@@ -23,7 +23,6 @@ const MapSSR = () => {
   useEffect(()=>{
       myPosition()
       setIcon(iconHandlerMap(transport.transportType))
-
     }, [])
 
     useEffect(()=>{

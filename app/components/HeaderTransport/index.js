@@ -11,12 +11,12 @@ const HeaderTransport = () => {
     const transport = useSelector(state => state.changePage.transport);
 
     return (
-        <Box sx={{ width: '20vw'}}>
+        <div className='header_transport'>
             <Paper sx={{backgroundColor: blue[700], textAlign: 'center'}} >
                 <Box sx={{color:blue[200], fontSize:'0.9rem'}}>{transport.transportType}</Box>
                 <Box sx={{color:blue[300], fontSize:'1.3rem', fontWeight:'800'}}>{transport.transportValue}</Box>
             </Paper>
-        </Box>
+        </div>
     )
 
 }
