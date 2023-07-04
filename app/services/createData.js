@@ -1,10 +1,7 @@
-// import { useSelector } from "react-redux"
-
 
 export const createData = async (params) =>{
 
-    // const params = useSelector(state => state.changePage.transport);
-    
+ 
     
     const TRANSPORT_TYPE = `transport-type=${params.transportType}`
     const TRANSPORT_VALUE = `transport-value=${params.transportValue}`

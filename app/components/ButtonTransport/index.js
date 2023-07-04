@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux"
 import {setTransport, setTransportType, setAllTransport} from '@/app/features/changeStatesSlice';
 
 
-const ButtonTransport = ({value}) => {
+const ButtonTransport = ({value, widthProps, heightProps}) => {
 
      const { iconHandlerTransport } = handlers;
     const icon = iconHandlerTransport(value);
@@ -23,7 +23,7 @@ const ButtonTransport = ({value}) => {
 
       
         return (
-        <Button value={value} onClick={clickHandler} sx={{width: '95vw', height: '80px', m:1}} variant="contained" startIcon={icon}> 
+        <Button value={value} onClick={clickHandler} sx={{width:widthProps, height:heightProps}} variant="contained" startIcon={icon}> 
             {value}
         </Button>
         )

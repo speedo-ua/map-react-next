@@ -42,10 +42,21 @@ const MapSSR = () => {
     }
 
   const myPosition = () => {
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0,
+    };
+
+    const error =(err) => {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+
     const successCallback = (position) =>{
       setMylocation([position.coords.latitude, position.coords.longitude])
-    }
-    navigator.geolocation.getCurrentPosition(successCallback)
+      }
+
+     return navigator.geolocation.getCurrentPosition(successCallback, error, options)
   }
 
   const iconTransport = new Icon({
@@ -57,6 +68,7 @@ const MapSSR = () => {
     iconUrl:'./img/mylocation.png',
     iconSize: [30,30]
   })
+
 
 
   if (transport !== 'All' && bus.length>0){

@@ -42,7 +42,7 @@ const TransportCard = ({data, icon}) => {
 
             <BortNumber number={data.bort_number}/>
             <Typography textAlign='center' variant="subtitle1" color="text.secondary" component="div">
-              Speed: {data.speed}
+              Current speed: {data.speed}
             </Typography>
           </CardContent>
 

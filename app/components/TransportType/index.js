@@ -1,7 +1,4 @@
-// import { useEffect } from "react";
 import ButtonTransport from "../ButtonTransport";
-import { Box } from '@mui/material';
-// import { useSelector } from "react-redux"
 
 
 const TransportType =() => {
@@ -9,11 +6,15 @@ const TransportType =() => {
 
     return (
         <>
-        <Box>
-            <ButtonTransport value = 'bus' />
-            <ButtonTransport value = 'tram' />
-            <ButtonTransport value = 'trol' />
-        </Box>
+            <div className="main_button">
+                <ButtonTransport widthProps='30vw' heightProps='15vh' value = 'bus' />
+            </div>
+            <div className="main_button">
+                <ButtonTransport widthProps='30vw' heightProps='15vh' value = 'tram' />
+            </div>
+            <div className="main_button">
+                <ButtonTransport widthProps='30vw' heightProps='15vh' value = 'trol' />
+            </div>
         </>
 
     )
